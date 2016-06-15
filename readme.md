@@ -1,5 +1,12 @@
 # Package gatt provides a Bluetooth Low Energy GATT implementation.
 
+## Note:
+
+This is a fork of the awesome package https://github.com/paypal/gatt.
+But because it doesn't seem like it's maintained anymore (last commit Oct 12, 2015 at the time of wrtiting), gambit provides a fork with some small improvements.
+
+---------------------------------------------------------------------
+
 Gatt (Generic Attribute Profile) is the protocol used to write BLE peripherals (servers) and centrals (clients).
 
 As a peripheral, you can create services, characteristics, and descriptors,
@@ -43,7 +50,7 @@ either be run as root, or be granted appropriate capabilities:
     <executable>
 
 ## Usage
-Please see [godoc.org](http://godoc.org/github.com/paypal/gatt) for documentation.
+Please see [godoc.org](http://godoc.org/github.com/gambit-labs/gatt) for documentation.
 
 ## Examples
 
