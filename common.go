@@ -220,6 +220,15 @@ func (c *Characteristic) AddDescriptor(u UUID) *Descriptor {
 	return d
 }
 
+// GetValue gets the static value stored in this characteristic
+// It returns the byte array that was passed as an argument to SetValue()
+func (c *Characteristic) GetValue() []byte {
+	if c.rhandler != nil {
+		panic("charactristic has been configured with a read handler")
+	}
+	return c.value
+}
+
 // SetValue makes the characteristic support read requests, and returns a
 // static value. SetValue must be called before the containing service is
 // added to a server.
@@ -353,6 +362,8 @@ func (d *Descriptor) Name() string {
 func (d *Descriptor) Characteristic() *Characteristic {
 	return d.char
 }
+
+
 
 // SetValue makes the descriptor support read requests, and returns a static value.
 // SetValue must be called before the containing service is added to a server.
