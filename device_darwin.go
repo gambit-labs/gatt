@@ -261,6 +261,11 @@ func (d *device) StopScanning() {
 	d.sendCmd(30, nil)
 }
 
+func (d *device) Stop() {
+	// Not implemented
+	return
+}
+
 func (d *device) Connect(p Peripheral) {
 	pp := p.(*peripheral)
 	d.plist[pp.id.String()] = pp

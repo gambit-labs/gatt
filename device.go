@@ -72,6 +72,9 @@ type Device interface {
 	// StopScanning stops scanning.
 	StopScanning()
 
+	// Disable the hci interface
+	Stop() error
+
 	// Connect connects to a remote peripheral.
 	Connect(p Peripheral)
 
